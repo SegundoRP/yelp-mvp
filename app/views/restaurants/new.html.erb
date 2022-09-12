@@ -1,0 +1,12 @@
+<br>
+<%= link_to "Restaurants", restaurants_path %>
+
+<h1>New restaurant</h1>
+
+<%= simple_form_for(Restaurant.new) do |t| %>
+  <%= t.input :name %>
+  <%= t.input :address %>
+  <%= t.input :phone_number %>
+  <%= t.input :category %>
+  <%= t.submit %>
+<% end %>

@@ -1,0 +1,14 @@
+<br>
+<%= link_to "Restaurants", restaurants_path %>
+<%= link_to "Agregar restaurante", new_restaurant_path %>
+<%= link_to "Agregar review", new_restaurant_review_path(@restaurant) %>
+
+<p><%= @restaurant.name %> </p>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+<% @restaurant.reviews.each do |review| %>
+<%# restauran.review es porque al tener el hasn many y el belongs to en active record ya puedes relacionarlos y sacar su valor de cada uno %>
+  <%= review.rating %>
+  <%= review.content %>
+<% end %>

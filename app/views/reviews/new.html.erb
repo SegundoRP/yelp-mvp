@@ -1,0 +1,10 @@
+<br>
+<%= link_to "Restaurants", restaurants_path %>
+
+<h1>New review</h1>
+
+<%= simple_form_for [@restaurant, @review] do |t| %>
+  <%= t.input :rating %>
+  <%= t.input :content %>
+  <%= t.submit %>
+<% end %>
