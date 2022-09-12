@@ -14,6 +14,7 @@ class ReviewsController < ApplicationController
       redirect_to restaurant_path(@restaurant)
     else
       render :new
+      # , status: :unprocessable_entity  esto es para rails 7 luego del render :new
     end
     # el condicional es para cuando falle el ingreso de la review por algun motivo como mal ingreso de datos lo regrese
     # a la misma vista o lo mande a la vista de review
